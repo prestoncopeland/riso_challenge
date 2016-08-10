@@ -7,24 +7,40 @@ set :raise_sinatra_param_exceptions, true
 disable :show_exceptions
 disable :raise_errors
 
+helpers do
+  def protected!
+    return if authorized?
+    headers['WWW-Authenticate'] = 'Basic realm="Restricted Area"'
+    halt 401, "Not authorized\n"
+  end
+
+  def authorized?
+    @auth ||=  Rack::Auth::Basic::Request.new(request.env)
+    @auth.provided? and @auth.basic? and @auth.credentials and @auth.credentials == ['admin@teachable.com', 'secret']
+  end
+end
+
+
 error Sinatra::Param::InvalidParameterError do
   status 422
   {error: "#{env['sinatra.error'].param} is invalid/blank"}.to_json
 end
 
 error 500 do
-  "Shit just got real bro"
-end
-
-use Rack::Auth::Basic do |username, password|
-  username == 'admin@teachable.com' && password == 'secret'
+  "I have been instructed to inform you that 'Shit just got real.'"
 end
 
 get "/" do
+  protected!
   File.open("./test-users.json").read
 end
 
+get "/homepage" do
+  send_file 'public/homepage.html'
+end
+
 post "/" do
+  protected!
   param :name, String, required: true
   param :email, String, required: true, format: /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/
 
@@ -40,6 +56,7 @@ post "/" do
 end
 
 delete "/:email" do
+  protected!
   param :email, String, required: true
 
   contents = File.open("./test-users.json").read
