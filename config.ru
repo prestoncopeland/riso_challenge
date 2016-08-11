@@ -30,15 +30,17 @@ error 500 do
   "I have been instructed to inform you that 'Shit just got real.'"
 end
 
+get "/homepage" do
+  send_file 'public/homepage.html'
+end
+
+##QUERY THE USERS LIST
 get "/" do
   protected!
   File.open("./test-users.json").read
 end
 
-get "/homepage" do
-  send_file 'public/homepage.html'
-end
-
+##ADD A NEW USER
 post "/" do
   protected!
   param :name, String, required: true
@@ -55,6 +57,7 @@ post "/" do
   "#{params['name']} now signed up with #{params['email']}"
 end
 
+##DELETE A USER
 delete "/:email" do
   protected!
   param :email, String, required: true
