@@ -1,0 +1,12 @@
+@mixin basic-border {
+  border:1px solid #ccc;
+}
+
+$basic-padding: 30px;
+$basic-background-color: #eaeaea;
+
+@mixin basic-element {
+  @include basic-border;
+  padding: $basic-padding;
+  background: $basic-background-color;
+}

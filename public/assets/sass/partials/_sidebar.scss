@@ -1,0 +1,18 @@
+// Sidebar Left
+main {
+  .sidebar-left[role="main"] {
+    form {
+      @include basic-element;
+      margin-bottom:20px;
+
+      input {
+        width:100%;
+        margin-bottom:10px;
+      }
+    }
+
+    .welcome-message {
+      @include basic-element;
+    }
+  }
+}

@@ -1,5 +1,10 @@
-// SASS
-@import "bootstrap/bootstrap";
+// Primary SASS File
 
-@import "general";
+//Mixins and Variables
 @import "mixins";
+
+//Third-Party Libraries
+@import "vendor/bootstrap/bootstrap";
+
+//Partials
+@import "partials/base";

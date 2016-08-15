@@ -1,0 +1,10 @@
+main {
+  padding:100px 0;
+
+  .main-content {
+
+    .registrants {
+      @include basic-element;
+    }
+  }
+}
