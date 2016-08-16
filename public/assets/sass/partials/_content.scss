@@ -5,12 +5,20 @@ main {
 
     .registrants {
       @include basic-element;
-      height:232px;
+      height:100%;
       width:560px;
+      padding-top:10px;
+      padding-bottom:20px;
+      margin-bottom:10px;
+    }
+
+    .list-group-item {
+      margin-bottom:15px;
+      background-color:$list-item-white;
     }
 
     span {
-      padding-right:15px;
+      padding-right:20px;
     }
   }
 }

@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $.getJSON("assets/js/test-users.json", function(data) {
+  $.getJSON("../../../test-users.json", function(data) {
     var registrantList = $("#registrant-list");
 
     $(data.guests).each(function(index,registrant) {

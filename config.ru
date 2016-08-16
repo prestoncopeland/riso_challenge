@@ -46,11 +46,11 @@ post "/" do
   param :name, String, required: true
   param :email, String, required: true, format: /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/
 
-  contents = File.open("./test-users.json").read
+  contents = File.open("public/test-users.json").read
   parsed_contents = JSON.parse(contents)
-  File.delete("./test-users.json")
+  File.delete("public/test-users.json")
   parsed_contents["guests"] << {"email": params["email"], "name": params["name"]}
-  File.open("./test-users.json", "w+") do |f|
+  File.open("public/test-users.json", "w+") do |f|
     f.puts JSON.pretty_generate(parsed_contents)
   end
 
@@ -62,11 +62,11 @@ delete "/:email" do
   protected!
   param :email, String, required: true
 
-  contents = File.open("./test-users.json").read
+  contents = File.open("public/test-users.json").read
   parsed_contents = JSON.parse(contents)
-  File.delete("./test-users.json")
+  File.delete("public/test-users.json")
   parsed_contents["guests"].delete_if {|guest| guest["email"] == params["email"]}
-  File.open("./test-users.json", "w+") do |f|
+  File.open("public/test-users.json", "w+") do |f|
     f.puts JSON.pretty_generate(parsed_contents)
   end
   "#{params['email']}has been removed successfully".to_json
