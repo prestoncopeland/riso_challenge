@@ -5807,7 +5807,7 @@ button.close {
   .hidden-print {
     display: none !important; } }
 main {
-  padding: 100px 0; }
+  padding: 70px 0; }
   main .main-content .registrants {
     border: 1px solid #ccc;
     padding: 30px;
@@ -5816,34 +5816,45 @@ main {
 header {
   background: #4a4a4a;
   text-align: center;
-  padding: 20px 0; }
+  padding: 16px 0px 3px 0px; }
   header h1 {
     padding: 0;
     margin: 0;
+    line-height: 130%;
     color: white;
     text-transform: uppercase;
-    font-size: 14px; }
+    font-size: 16px; }
 
 main .sidebar-left form {
   border: 1px solid #ccc;
   padding: 30px;
   background: white;
   margin-bottom: 20px;
-  padding-top: 10px; }
+  padding-top: 10px;
+  padding-left: 24px;
+  padding-right: 24px;
+  width: 271px;
+  height: 235px; }
   main .sidebar-left form input {
-    width: 100%;
+    width: 227px;
+    height: 36px;
     padding: 10px;
     margin-bottom: 10px; }
-  main .sidebar-left form h2 {
-    margin: -20px 0 0 0;
-    color: #4a4a4a; }
+  main .sidebar-left form h4 {
+    color: #4a4a4a;
+    font-size: 16px; }
 main .sidebar-left .welcome-message {
   border: 1px solid #ccc;
   padding: 30px;
   background: white; }
 main .sidebar-left .sidebar-button {
-  padding: 10px 40px;
-  background-color: #2aa070; }
+  width: 110px;
+  height: 40px;
+  font-size: 12px;
+  background-color: #2aa070;
+  color: white;
+  padding-left: 35px;
+  padding-right: 35px; }
 
 body {
   font-size: 16px;

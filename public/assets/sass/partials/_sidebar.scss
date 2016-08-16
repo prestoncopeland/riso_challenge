@@ -5,16 +5,21 @@ main {
       @include basic-element;
       margin-bottom:20px;
       padding-top:10px;
+      padding-left:24px;
+      padding-right:24px;
+      width: 271px;
+      height: 235px;
 
       input {
-        width:100%;
+        width:227px;
+        height:36px;
         padding:10px;
         margin-bottom:10px;
       }
 
-      h2 {
-        margin: -20px 0 0 0;
+      h4 {
         color:$theme-black;
+        font-size:16px;
       }
     }
 
@@ -23,8 +28,13 @@ main {
     }
 
     .sidebar-button {
-      padding:10px 40px;
+      width:110px;
+      height:40px;
+      font-size:12px;
       background-color:#2aa070;
+      color:white;
+      padding-left:35px;
+      padding-right:35px;
     }
   }
 }
