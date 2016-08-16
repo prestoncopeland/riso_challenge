@@ -15,12 +15,14 @@ main {
       h2 {
         margin: -20px 0 0 0;
       }
-
-
     }
 
     .welcome-message {
       @include basic-element;
+    }
+
+    .sidebar-button {
+      padding:10px 40px;
     }
   }
 }
