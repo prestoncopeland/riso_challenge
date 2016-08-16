@@ -2,11 +2,13 @@
   border:1px solid #ccc;
 }
 
-$basic-padding: 30px;
-$basic-background-color: #eaeaea;
+$basic-padding:30px;
+$original-background-color:#eaeaea;
+$theme-black:#4a4a4a;
+$theme-white:#f8f8f5;
 
 @mixin basic-element {
   @include basic-border;
   padding: $basic-padding;
-  background: $basic-background-color;
+  background: white;
 }
