@@ -5810,7 +5810,9 @@ main {
   padding: 70px 0; }
   main .main-content .registrants {
     border: 1px solid #ccc;
-    padding: 30px;
+    padding-top: 10px;
+    padding-left: 24px;
+    padding-right: 24px;
     background: white; }
 
 header {
@@ -5827,7 +5829,9 @@ header {
 
 main .sidebar-left form {
   border: 1px solid #ccc;
-  padding: 30px;
+  padding-top: 10px;
+  padding-left: 24px;
+  padding-right: 24px;
   background: white;
   margin-bottom: 20px;
   padding-top: 10px;
@@ -5845,7 +5849,9 @@ main .sidebar-left form {
     font-size: 16px; }
 main .sidebar-left .welcome-message {
   border: 1px solid #ccc;
-  padding: 30px;
+  padding-top: 10px;
+  padding-left: 24px;
+  padding-right: 24px;
   background: white; }
 main .sidebar-left .sidebar-button {
   width: 110px;
