@@ -1,14 +1,22 @@
 // Sidebar Left
 main {
-  .sidebar-left[role="main"] {
+  .sidebar-left {
     form {
       @include basic-element;
       margin-bottom:20px;
+      padding-top:10px;
 
       input {
         width:100%;
+        padding:10px;
         margin-bottom:10px;
       }
+
+      h2 {
+        margin: -20px 0 0 0;
+      }
+
+
     }
 
     .welcome-message {
