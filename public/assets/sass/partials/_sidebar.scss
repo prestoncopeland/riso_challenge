@@ -4,9 +4,6 @@ main {
     form {
       @include basic-element;
       margin-bottom:20px;
-      padding-top:10px;
-      padding-left:24px;
-      padding-right:24px;
       width: 271px;
       height: 235px;
 
@@ -31,7 +28,7 @@ main {
       width:110px;
       height:40px;
       font-size:12px;
-      background-color:#2aa070;
+      background-color:$theme-green;
       color:white;
       padding-left:35px;
       padding-right:35px;

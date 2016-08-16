@@ -5813,7 +5813,9 @@ main {
     padding-top: 10px;
     padding-left: 24px;
     padding-right: 24px;
-    background: white; }
+    background: white;
+    height: 232px;
+    width: 560px; }
 
 header {
   background: #4a4a4a;
@@ -5834,9 +5836,6 @@ main .sidebar-left form {
   padding-right: 24px;
   background: white;
   margin-bottom: 20px;
-  padding-top: 10px;
-  padding-left: 24px;
-  padding-right: 24px;
   width: 271px;
   height: 235px; }
   main .sidebar-left form input {
@@ -5857,7 +5856,7 @@ main .sidebar-left .sidebar-button {
   width: 110px;
   height: 40px;
   font-size: 12px;
-  background-color: #2aa070;
+  background-color: #12a075;
   color: white;
   padding-left: 35px;
   padding-right: 35px; }

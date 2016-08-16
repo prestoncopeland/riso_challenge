@@ -37,7 +37,7 @@ end
 ##QUERY THE USERS LIST
 get "/" do
   protected!
-  File.open("./test-users.json").read
+  send_file 'public/homepage.html'
 end
 
 ##ADD A NEW USER

@@ -5,6 +5,8 @@ main {
 
     .registrants {
       @include basic-element;
+      height:232px;
+      width:560px;
     }
   }
 }
