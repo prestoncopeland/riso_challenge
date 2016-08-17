@@ -1,6 +1,14 @@
 main {
   padding:70px 0;
 
+  .custom-success {
+    height:61px;
+    width:856px;
+    background-color:$theme-green;
+    color:white;
+    font-size:15px;
+  }
+
   .main-content {
 
     .registrants {
