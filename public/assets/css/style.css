@@ -5810,10 +5810,11 @@ main {
   padding: 70px 0; }
   main .custom-success {
     height: 61px;
-    width: 856px;
+    width: 882px;
     background-color: #12a075;
     color: white;
-    font-size: 15px; }
+    font-size: 15px;
+    text-align: center; }
   main .main-content .registrants {
     border: 1px solid #ccc;
     padding-top: 10px;

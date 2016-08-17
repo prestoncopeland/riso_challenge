@@ -20,11 +20,11 @@
 	    <div class="container">
 	    	<div class="row">
           <!-- alerts -->
-          <div id="alerts">
+          <div class="col-xs-12 col-sm-12" id="alerts">
             <% if @success_msg %>
-              <div class="alert alert-success" >
+              <div class="alert custom-success" >
                 <a class="close" data-dismiss="alert">×</a>
-                <b><%= @success_msg %></b>
+                <%= @success_msg %>
               </div>
             <% end %>
           </div>
