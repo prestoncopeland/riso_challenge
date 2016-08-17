@@ -1,6 +1,10 @@
 require 'sinatra'
 require "sinatra/param"
 require "json"
+require "tilt"
+require "erb"
+
+Tilt.register Tilt::ERBTemplate, 'html.erb'
 
 set :raise_sinatra_param_exceptions, true
 
@@ -31,13 +35,13 @@ error 500 do
 end
 
 get "/homepage" do
-  send_file 'public/homepage.html'
+  erb :'public/homepage.html'
 end
 
 ##QUERY THE USERS LIST
 get "/" do
   protected!
-  send_file 'public/homepage.html'
+  erb :'public/homepage.html'
 end
 
 ##ADD A NEW USER
@@ -54,7 +58,7 @@ post "/" do
     f.puts JSON.pretty_generate(parsed_contents)
   end
 
-  "#{params['name']} now signed up with #{params['email']}"
+  @success_msg = "#{params['name']} now signed up with #{params['email']}"
 end
 
 ##DELETE A USER
@@ -69,7 +73,9 @@ delete "/:email" do
   File.open("public/test-users.json", "w+") do |f|
     f.puts JSON.pretty_generate(parsed_contents)
   end
-  "#{params['email']}has been removed successfully".to_json
+
+  @success_msg = "#{params['email']}has been removed successfully".to_json
+  redirect "/"
 end
 
 run Sinatra::Application
