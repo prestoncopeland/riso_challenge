@@ -5826,6 +5826,13 @@ main {
     padding-top: 10px;
     padding-bottom: 20px;
     margin-bottom: 10px; }
+  main .main-content .no-registrants {
+    border-style: dotted;
+    width: 100%;
+    height: 147px;
+    text-align: center;
+    color: #bfbfbf;
+    border-color: #bfbfbf; }
   main .main-content .list-group-item {
     margin-bottom: 15px;
     background-color: #fafafa; }

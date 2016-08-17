@@ -1,12 +1,16 @@
 {
   "guests": [
     {
-      "email": "carlie@maybe.com",
-      "name": "Carlie Fiorina"
+      "name": "Russ",
+      "email": "russ@graney.com"
     },
     {
-      "email": "test1.com",
-      "name": "Adam C"
+      "email": "teachable@teachable.com",
+      "name": "Jackson Riso"
+    },
+    {
+      "email": "vegas@vacation.com",
+      "name": "Wayne Newton"
     }
   ]
 }

@@ -71,7 +71,7 @@ delete "/:email" do
     f.puts JSON.pretty_generate(parsed_contents)
   end
 
-  @success_msg = "#{params['email']} has been removed successfully".to_json
+  @success_msg = "Thanks, #{params['email']} has been removed successfully".to_json
   erb :homepage
 end
 
