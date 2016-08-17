@@ -1,10 +1,7 @@
 require 'sinatra'
 require "sinatra/param"
 require "json"
-require "tilt"
 require "erb"
-
-Tilt.register Tilt::ERBTemplate, 'html.erb'
 
 set :raise_sinatra_param_exceptions, true
 
@@ -24,7 +21,6 @@ helpers do
   end
 end
 
-
 error Sinatra::Param::InvalidParameterError do
   status 422
   {error: "#{env['sinatra.error'].param} is invalid/blank"}.to_json
@@ -35,13 +31,13 @@ error 500 do
 end
 
 get "/homepage" do
-  erb :'public/homepage.html'
+  erb :homepage
 end
 
 ##QUERY THE USERS LIST
 get "/" do
   protected!
-  erb :'public/homepage.html'
+  erb :homepage
 end
 
 ##ADD A NEW USER
@@ -58,7 +54,8 @@ post "/" do
     f.puts JSON.pretty_generate(parsed_contents)
   end
 
-  @success_msg = "#{params['name']} now signed up with #{params['email']}"
+  @success_msg = "Thank you for registering #{params['name']}"
+  erb :homepage
 end
 
 ##DELETE A USER
@@ -75,7 +72,7 @@ delete "/:email" do
   end
 
   @success_msg = "#{params['email']}has been removed successfully".to_json
-  redirect "/"
+  erb :homepage
 end
 
 run Sinatra::Application
