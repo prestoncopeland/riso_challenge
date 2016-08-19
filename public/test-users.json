@@ -1,10 +1,6 @@
 {
   "guests": [
     {
-      "name": "Russ",
-      "email": "russ@graney.com"
-    },
-    {
       "email": "teachable@teachable.com",
       "name": "Jackson Riso"
     },
